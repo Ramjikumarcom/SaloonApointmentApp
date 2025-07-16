@@ -97,12 +97,22 @@ Follow these instructions to get the project up and running on your local machin
 
 The backend consists of the following microservices:
 
-- **Eureka Server:** Handles service registration and discovery.
-- **Gateway Server:** The single entry point for all client requests.
-- **Booking Service:** Manages appointment bookings.
-- **Category Service:** Manages service categories.
-- **Notification Service:** Handles notifications to users.
-- **Payment Service:** Processes payments for bookings.
-- **Review Service:** Manages user reviews and ratings.
-- **Saloon User Details:** Manages user-related data.
-- **Service Offering:** Manages the services offered by saloons.
+- **Eureka Server:** Handles service registration and discovery, allowing microservices to find and communicate with each other dynamically.
+
+- **Gateway Server:** The single entry point for all client requests. It routes requests to the appropriate microservices and handles cross-cutting concerns like authentication and logging.
+
+- **Booking Service:** Manages the core appointment booking functionality. It handles creating, retrieving, and updating bookings, and communicates with other services for payment and user details.
+
+- **Category Service:** Manages service categories. Saloon owners can create and delete categories for their saloons, while customers can browse and search for services by category.
+
+- **Notification Service:** Handles sending notifications to users and saloon owners. It can be used for appointment reminders, booking confirmations, and other important updates.
+
+- **Payment Service:** Processes payments for bookings. It integrates with payment gateways like Razorpay and Stripe to create and manage payment orders.
+
+- **Review Service:** Manages user reviews and ratings for saloons. It allows users to create, retrieve, update, and delete reviews.
+
+- **Saloon User Details:** Manages user authentication and profiles. It handles user registration, login, and token management, as well as CRUD operations for user data.
+
+- **Saloon Service Appointment:** Manages saloon profiles and services. It allows saloon owners to create and update their saloon details, and customers to browse and search for saloons.
+
+- **Service Offering:** Manages the specific services offered by saloons. Saloon owners can create, update, and delete service offerings, which can then be booked by customers.
