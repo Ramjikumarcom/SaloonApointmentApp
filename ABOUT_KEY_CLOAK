@@ -1,0 +1,108 @@
+🔐 Keycloak Integration in Spring Boot – For Saloon Appointment Project
+📘 What is Keycloak?
+Keycloak is an open-source Identity and Access Management (IAM) tool that provides:
+
+Authentication (Login/Logout)
+
+Authorization (Role-based access)
+
+Single Sign-On (SSO)
+
+User and Role Management
+
+Token-based Security using OAuth2 / OpenID Connect / JWT
+
+Integration with LDAP, Social Login (Google, Facebook, etc.)
+
+
+
+
+ Why Use Keycloak in Spring Boot?
+Spring Boot applications often require secure authentication and role-based access control. Instead of manually coding security using Spring Security and JWT, Keycloak provides a ready-to-use system to:
+
+Authenticate users (login)
+
+Authorize users (roles, access control)
+
+Protect REST APIs and microservices
+
+Integrate easily with React frontend
+
+
+
+
+🔧 Operations Supported by Keycloak
+1. 🔐 Authentication
+User Login & Logout
+
+Session management
+
+OAuth2 and OIDC support
+
+Multi-factor authentication (MFA)
+
+Social login (Google, Facebook, GitHub)
+
+
+
+👤 User Management
+Create, update, delete users
+
+Password reset
+
+Lock/unlock accounts
+
+Assign roles and groups
+
+
+
+. 🔒 Authorization
+Define custom roles (e.g., ADMIN, CUSTOMER, STAFF)
+
+Role-based access control for endpoints
+
+Protect frontend routes/pages
+
+Policy-based access (using resources and scopes)
+
+
+
+4. 🔗 Integration Support
+Spring Boot (via Spring Security Keycloak adapter)
+
+React (via Keycloak JS adapter)
+
+REST APIs (access control with Bearer token)
+
+Microservices (secure communication between services)
+
+
+
+💈 Keycloak Use in Saloon Appointment Project
+👥 User Roles
+Role	Permissions
+ADMIN	Add/remove services, manage staff, view all appointments
+STAFF	View assigned appointments, update status
+CUSTOMER	Book appointments, view own bookings
+
+
+🎯 Keycloak Features for Saloon Project
+Feature	Usage
+User Login	Customers, staff, and admin login via Keycloak
+Role Management	Define roles in Keycloak (Admin, Staff, Customer)
+API Security	Protect endpoints like /api/admin/** using role-based access
+Frontend Protection	Use Keycloak JS Adapter in React to secure routes
+Single Sign-On	Optional – one login for multiple services
+Token-based Auth	Automatically handled by Keycloak with JWT tokens
+
+
+
+
+📦 Summary
+Keycloak simplifies security for Spring Boot + React applications
+
+Saves time by avoiding custom user/role management code
+
+Suitable for microservice architecture and role-based systems
+
+For your Saloon project, it provides professional-grade access control for Admins, Staff, and Customers

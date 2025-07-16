@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: PaymentService
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:8080/realms/Saloon-Booking-Project/protocol/openid-connect/certs
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  rabbitmq:
+    port: 5672
+    host: rabbitmq
+    username: guest
+    password: guest
+
+server:
+  port: 8096
+
+razorpay:
+  api:
+    key: ${RAZORPAY_API_KEY}
+    secret: ${RAZORPAY_API_SECRET}
+
+stripe:
+  api:
+    key: ${STRIPE_API_KEY}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

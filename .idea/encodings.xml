@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Microservices/BookinService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/CategoryService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/GateWayServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/NotificationServices/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/PaymentService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/ReviewService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/SaloonServiceAppointment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/SaloonUserDetails/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/ServiceOffering/src/main/java" charset="UTF-8" />
+  </component>
+</project>

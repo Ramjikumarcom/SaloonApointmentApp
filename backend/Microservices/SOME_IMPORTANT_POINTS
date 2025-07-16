@@ -1,0 +1,13 @@
+
+
+ENUM
+/*
+    enum (short for enumeration) is a special data type used to define a fixed set of constant values.
+    public enum Day {
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    }
+
+*/
+
+
+

@@ -1,0 +1,74 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: GateWayServer
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true  # optional but recommended for consistency
+
+      routes:
+        - id: AUTHSERVICE
+          uri: lb://saloonapointment
+          predicates:
+            - Path=/auth/**
+
+        - id: BOOKINGSERVICE
+          uri: lb://bookingservice
+          predicates:
+            - Path=/api/bookings/**
+
+        - id: PAYMENTSERVICE
+          uri: lb://PaymentService
+          predicates:
+            - Path=/api/payments/**
+
+        - id: CATEGORYSERVICE
+          uri: lb://categoryservice
+          predicates:
+            - Path=/api/category/**
+
+        - id: NOTIFICATIONSERVICES
+          uri: lb://NotificationServices
+          predicates:
+            - Path=/api/notifications/**
+
+        - id: SALOONAPOINTMENT
+          uri: lb://saloonapointment
+          predicates:
+            - Path=/api/users/**
+
+        - id: REVIEWSERVICE
+          uri: lb://ReviewService
+          predicates:
+            - Path=/api/reviews/**
+
+        - id: SALOONSERVICEAPPOINTMENT
+          uri: lb://saloonserviceappointment
+          predicates:
+            - Path=/api/saloonService/**
+
+        - id: SERVICEOFFERING
+          uri: lb://serviceoffering
+          predicates:
+            - Path=/api/service-offering/**
+#  http://localhost:8000/api/service-offering/saloon-owner/create
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:8080/realms/Saloon-Booking-Project/protocol/openid-connect/certs
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekaserver:8097/eureka/

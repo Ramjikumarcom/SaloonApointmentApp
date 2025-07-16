@@ -1,0 +1,3 @@
+ ./mvnw compile jib:build -Djib.to.auth.username=gupta9939 -Djib.to.auth.password=Ramjik1805@
+
+saloondTo(code with zosh)==saloonServiceDto(mera)
